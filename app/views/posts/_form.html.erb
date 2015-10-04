@@ -1,8 +1,10 @@
-<%= form_for @post do |f| %>
-	<% if @post.errors.any? %>
-		<h2><%= pluralize(@post.errors.count, "error") %> Prevented this post from saving:</h2>
+<% @posts %>
+
+<%= form_for @posts do |f| %>
+	<% if @posts.errors.any? %>
+		<h2><%= pluralize(@posts.errors.count, "error") %> Prevented this post from saving:</h2>
 		<ul>
-			<% @post.errors.full_messages.each do |msg| %>
+			<% @posts.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
 			<% end %>
 		</ul>
