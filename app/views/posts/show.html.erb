@@ -1,8 +1,10 @@
-<%= @posts.tile %><br>
-<%= @posts.content %>
+<div class="skinnywrapper">
+<p><%= @posts.tile %><br></p>
+<p><%= @posts.content %></p>
 
 <br>
 <br>
 
 <%= link_to "Edit", edit_post_path(@posts) %>
 <%= link_to "Delete", post_path(@posts), method: :delete, data: {confirm:"Are you sure?"} %>
+</div>
