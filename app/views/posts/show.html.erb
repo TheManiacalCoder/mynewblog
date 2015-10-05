@@ -1,10 +1,29 @@
-<div class="skinnywrapper">
-<p><%= @posts.tile %><br></p>
-<p><%= @posts.content %></p>
+
 
 <br>
 <br>
+<div id="post_show_content" 
+		class="wrapper_padding">
+			<header>
+				<p class="date"><%= @posts.created_at.strftime("%A, %b %d") %></p>
+				<h1><%= @posts.tile %></h1>
+			</header>
+			<br>
+			<br>
+			<div id="content" class="skinnywrapper">
+			<hr>
+			<p><%= @posts.content %></p>
+			<hr>
+				
+			</div>
+			
+			<div id="sharebox" class="skinnywrapper">
+				<p3>Please share '<%= @posts.tile %>'</p>
+				<a onclick="javascript:window.open('http://twitter.com/share?text=<%= @posts.tile %> by @seanmcraig - &amp;url=<%= url_for([@posts, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+				   
+				   <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@posts, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
 
-<%= link_to "Edit", edit_post_path(@posts) %>
-<%= link_to "Delete", post_path(@posts), method: :delete, data: {confirm:"Are you sure?"} %>
-</div>
+				<a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@posts, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+			</div>
+		</div>
+
