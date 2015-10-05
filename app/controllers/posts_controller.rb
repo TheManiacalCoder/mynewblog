@@ -22,10 +22,17 @@ class PostsController < ApplicationController
 	def edit
 	end
 
+
+
 	def update
 		if @posts.update post_params
 			redirect_to @posts, notice: "It was saved!"
 		end
+	end
+
+	def destroy
+		@posts.destroy
+		redirect_to posts_path
 	end
 
 	private
