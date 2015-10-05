@@ -61,7 +61,7 @@
 		}
 		.disabled{
 			color: #c0c0c0;
-			&hover{
+			&:hover{
 				color: #c0c0c0;
 				background-color: $white;
 			}
