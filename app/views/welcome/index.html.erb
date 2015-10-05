@@ -1,0 +1,29 @@
+<div class="wrapper wrapper_padding clearfix">	
+			<div class="col-1 about homepage_content">
+				<h2>About</h2>
+				<hr class="new">
+				<p>
+				I'm a Digital Marketing Coordinator, and Social Media Analyst. I also do graphic design, web development, and I write copy! You can probably tell that I'm a pretty busy guy. I'm always expanding my portfolio.</p>
+				<p> This site was programmed by me using Ruby on Rails! it's fully dynamic and adaptive! the content on this site will grow along with my career so be sure to keep up.
+				<p>You can find me speaking in 140 charecters on Twitter, connecting to professionals on Linked In, and sharing stuff on Facebook!</p>
+			</div>
+			<div class="col-2 homepage_content">
+				<h2>Stuff I've Writen</h2>
+				<hr>
+
+				<% @posts.each do |posts| %>
+					<h3><a href="#"><%= link_to posts.tile, posts %></a></h3>
+					<p class="date"><%= posts.created_at.strftime("%A, %b %d") %></p>
+				<% end %>	
+			</div>
+			<div class="col-3 homepage_content">
+				<h2>Stuff I've Built</h2>
+				<hr>
+				<h3><a href="#">Unicasts</a></h3>
+				<p class="date">Friday April 10th</p>
+				<h3><a href="#">The Macenzie Child Community</a></h3>
+				<p class="date">Friday April 10th</p>
+				<h3><a href="#">12 in 12 challenge</a></h3>
+				<p class="date">Friday April 10th</p>
+			</div>
+		</div>
