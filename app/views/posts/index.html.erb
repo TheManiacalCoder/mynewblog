@@ -1,16 +1,8 @@
 <div id="posts_wrapper" class="skinnywrapper">
-				<div class="post">
-				<%= @posts.each do |post| %>
-					<p class="date"><%= post.created_at.strftime ('%A, %B, %d')%></p>
-					<h2 ><a href="#"><%= link_to post.tile, post  %></a></h2>
-					<hr>
-				<% end %>
-				</div>
-				<div class="pagination">
-					<span class="previous_page disabled">
-					previous</span>
-					<em class="current">1</em>
-					<a rel="next" href="#">2</a>
-					<a rel="next_page" href="#">Next </a>
-				</div>
-			</div>
+	<%= @posts.each do |post| %>
+		<div class="post">
+			<p class="date"><%= post.created_at.strftime('%A, %B, %d')%></p>
+			<h2><href id="#"><%=link_to post.tile, post%></href></h2>
+		</div>
+	<% end %>
+	<%= will_paginate @posts %>

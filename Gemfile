@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'will_paginate', '~> 3.0.7'
 gem 'friendly_id', '~> 5.1.0'
 gem 'better_errors', '~> 2.1.1'
 gem 'pg', '~> 0.18.2'
