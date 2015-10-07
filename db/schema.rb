@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151007042627) do
+=======
+ActiveRecord::Schema.define(version: 20151003191049) do
+>>>>>>> 0c00c7fb465c348965c6ddbfef783a0c336bcc9c
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
@@ -29,14 +34,21 @@ ActiveRecord::Schema.define(version: 20151007042627) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
+=======
+>>>>>>> 0c00c7fb465c348965c6ddbfef783a0c336bcc9c
   create_table "posts", force: true do |t|
     t.string   "tile"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.string   "slug"
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
 
+=======
+  end
+
+>>>>>>> 0c00c7fb465c348965c6ddbfef783a0c336bcc9c
 end

@@ -55,8 +55,11 @@ GEM
     coffee-script-source (1.9.1.1)
     erubis (2.7.0)
     execjs (2.6.0)
+<<<<<<< HEAD
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
+=======
+>>>>>>> 0c00c7fb465c348965c6ddbfef783a0c336bcc9c
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.3.2)
@@ -130,7 +133,10 @@ PLATFORMS
 DEPENDENCIES
   better_errors (~> 2.1.1)
   coffee-rails (~> 4.0.0)
+<<<<<<< HEAD
   friendly_id (~> 5.1.0)
+=======
+>>>>>>> 0c00c7fb465c348965c6ddbfef783a0c336bcc9c
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.18.2)
