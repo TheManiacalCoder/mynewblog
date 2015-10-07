@@ -37,11 +37,11 @@ class PostsController < ApplicationController
 
 	private
 	def post_params
-		params.require(:post).permit(:tile, :content, :slug)
+		params.require(:post).permit(:tile, :content, :slugged)
 	end
 
 	def find_post
-		@posts = Post.friendly.find(params[:id])
+		@posts = Post.friendly.find(params[:id,])
 	end
 	
 end
