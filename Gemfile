@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-<<<<<<< HEAD
 gem 'friendly_id', '~> 5.1.0'
-=======
->>>>>>> 0c00c7fb465c348965c6ddbfef783a0c336bcc9c
 gem 'better_errors', '~> 2.1.1'
 gem 'pg', '~> 0.18.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
