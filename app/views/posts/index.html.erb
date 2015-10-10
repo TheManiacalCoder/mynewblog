@@ -1,6 +1,10 @@
-<div id="posts_wrapper" class="skinnywrapper">
-	<p class="date"><%= @posts.created_at.strftime("%A, %b %d") %></p>
-				<h1><%= @posts.tile %></h1>
 
+<div id="posts_wrapper" class="skinny_wrapper">
+<% @posts.each do |posts| %>
+	<div class="post">
+	<h3 ><%= link_to posts.tile, posts %></a></h3>
+	<p class="date"><%= posts.created_at.strftime("%A, %b %d") %></p>
+	<hr class="skinnywrapper">
+	</div>
+<% end %>
 </div>
-	<%= will_paginate @posts %>
