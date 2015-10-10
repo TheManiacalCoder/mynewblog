@@ -6,5 +6,10 @@
 	<p class="date"><%= posts.created_at.strftime("%A, %b %d") %></p>
 	<hr class="skinnywrapper">
 	</div>
+
 <% end %>
+
+<br>
+<br>
+<%= will_paginate @posts %>
 </div>
