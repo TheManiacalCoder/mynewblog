@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-	before_action :find_post, only: [:show, :edit, :update, :destroy]
+	before_action :find_post, only: [:index, :show, :edit, :update, :destroy]
 	def index
-		@posts = Post.all.order("created_at desc").paginate(page: params[:page],per_page:5)
+		@posts = Post.all.order("created_at desc").paginate(page: params[:id],per_page:5)
 	end
 	def new
 		@posts = Post.new
@@ -38,11 +38,11 @@ class PostsController < ApplicationController
 
 	private
 	def post_params
-		params.require(:post).permit(:tile, :content, :slugged)
+		params.require(:post).permit(:tile, :content, :slug)
 	end
 
 	def find_post
-		@posts = Post.friendly.find(params[:id,])
+		@posts = Post.friendly.find(params[:id])
 	end
 	
 end
