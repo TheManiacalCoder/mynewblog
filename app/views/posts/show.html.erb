@@ -17,7 +17,15 @@
 			<hr>
 				
 			</div>
-			
+			<div id="content" class="skinnywrapper">
+			<% if user_signed_in? %>
+				<div id="admin_links">
+					<%=link_to "Edit Article", edit_post_path(@posts)%>
+					<%=link_to "Delete Article", post_path(@posts), method: :delete, data: {confirm: "Are You Sure?"}  %>	
+						
+				</div>
+			<% end %>
+
 			<div id="sharebox" class="skinnywrapper">
 				<p3>Please share '<%= @posts.tile %>'</p>
 				<a onclick="javascript:window.open('http://twitter.com/share?text=<%= @posts.tile %> by @seanmcraig - &amp;url=<%= url_for([@posts, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
