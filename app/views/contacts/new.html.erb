@@ -1,7 +1,26 @@
-<div id="posts_wrapper" class="skinny_wrapper">
-<h1 class="post">Contact Information</h1>
-<p class="post">Phone: (587) 336-1344</p>
-<p class="post">Email: sean.m.craig02@gmail.com</p>
-<p class="post">Adress: 10127 104 ST NW Alberta</p>
+<h1 id="page_title">Say Hello!</h1>
 
-</div>
+<div class="skinnywrapper wrapper_padding">
+	<%= form_for @contact do |f| %>
+		<%= f.label :name %><br>
+		<%= f.text_field :name, required: true %>
+
+		<br>
+
+		<%= f.label :email %><br>
+		<%= f.text_field :email, required: true %>
+		
+		<br>
+
+		<%= f.label :message %><br>
+		<%= f.text_area :message, as: :text %>
+
+		<div class= "hidden">
+
+		<%= f.label :nickname %><br>
+		<%= f.text_field :nickname, hint: 'leave this field blank' %>
+		</div>
+		<%= f.submit 'Send Message', class: "button" %>
+		
+	<% end %>
+	
