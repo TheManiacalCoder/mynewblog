@@ -19,6 +19,11 @@ development:
   password: Borderlands1
   pool: 5
   timeout: 5000
+  cloud_name: www-digitallysquaredmedia-com
+  api_key: '371171816248957'
+  api_secret: 8FyNfmdMRnVJQ0xqW1dhjF2soLY
+  enhance_image_tag: true
+  static_image_support: false
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -30,6 +35,12 @@ test:
   password: Borderlands1
   pool: 5
   timeout: 5000
+  test:
+  cloud_name: www-digitallysquaredmedia-com
+  api_key: '371171816248957'
+  api_secret: 8FyNfmdMRnVJQ0xqW1dhjF2soLY
+  enhance_image_tag: true
+  static_image_support: false
 
 production:
   adapter: postgresql
@@ -38,3 +49,10 @@ production:
   password: Borderlands1
   pool: 5
   timeout: 5000
+  production:
+  cloud_name: www-digitallysquaredmedia-com
+  api_key: '371171816248957'
+  api_secret: 8FyNfmdMRnVJQ0xqW1dhjF2soLY
+  enhance_image_tag: true
+  static_image_support: true
+  
