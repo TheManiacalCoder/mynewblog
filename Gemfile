@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'tinymce-rails'
 gem 'google-analytics-rails', '~> 0.0.6'
 gem 'devise', '~> 3.5.2'
 gem 'mail_form', '~> 1.5.1'
